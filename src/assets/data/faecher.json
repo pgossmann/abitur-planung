@@ -1,0 +1,172 @@
+{
+    "schulfaecher": [
+      {
+        "id": 1,
+        "name": "Deutsch",
+        "startedInGrade": 5,
+        "isAvailable": true,
+        "isUnwanted": false,
+        "category": "Sprachen"
+      },
+      {
+        "id": 2,
+        "name": "Englisch",
+        "startedInGrade": 5,
+        "isAvailable": true,
+        "isUnwanted": false,
+        "category": "Sprachen"
+      },
+      {
+        "id": 3,
+        "name": "Französisch ab 7",
+        "startedInGrade": 7,
+        "isAvailable": true,
+        "isUnwanted": false,
+        "category": "Sprachen"
+      },
+      {
+        "id": 4,
+        "name": "Französisch ab 9",
+        "startedInGrade": 9,
+        "isAvailable": true,
+        "isUnwanted": false,
+        "category": "Sprachen"
+      },
+      {
+        "id": 5,
+        "name": "Spanisch ab 9",
+        "startedInGrade": 9,
+        "isAvailable": true,
+        "isUnwanted": false,
+        "category": "Sprachen"
+      },
+      {
+        "id": 6,
+        "name": "Spanisch ab 11",
+        "startedInGrade": 11,
+        "isAvailable": true,
+        "isUnwanted": false,
+        "category": "Sprachen"
+      },
+      {
+        "id": 7,
+        "name": "Latein",
+        "startedInGrade": 5,
+        "isAvailable": true,
+        "isUnwanted": false,
+        "category": "Sprachen"
+      },
+      {
+        "id": 8,
+        "name": "Kunst",
+        "startedInGrade": 5,
+        "isAvailable": true,
+        "isUnwanted": false,
+        "category": "Kunst/Musik"
+      },
+      {
+        "id": 9,
+        "name": "Musik",
+        "startedInGrade": 5,
+        "isAvailable": true,
+        "isUnwanted": false,
+        "category": "Kunst/Musik"
+      },
+      {
+        "id": 10,
+        "name": "Erdkunde",
+        "startedInGrade": 5,
+        "isAvailable": true,
+        "isUnwanted": false,
+        "category": "Gesellschaftswissenschaften"
+      },
+      {
+        "id": 11,
+        "name": "Sozialwissenschaften",
+        "startedInGrade": 8,
+        "isAvailable": true,
+        "isUnwanted": false,
+        "category": "Gesellschaftswissenschaften"
+      },
+      {
+        "id": 12,
+        "name": "Pädagogik",
+        "startedInGrade": 11,
+        "isAvailable": true,
+        "isUnwanted": false,
+        "category": "Gesellschaftswissenschaften"
+      },
+      {
+        "id": 13,
+        "name": "Geschichte",
+        "startedInGrade": 6,
+        "isAvailable": true,
+        "isUnwanted": false,
+        "category": "Gesellschaftswissenschaften"
+      },
+      {
+        "id": 14,
+        "name": "Mathematik",
+        "startedInGrade": 5,
+        "isAvailable": true,
+        "isUnwanted": false,
+        "category": "Mathematik"
+      },
+      {
+        "id": 15,
+        "name": "Biologie",
+        "startedInGrade": 5,
+        "isAvailable": true,
+        "isUnwanted": false,
+        "category": "Naturwissenschaften"
+      },
+      {
+        "id": 16,
+        "name": "Physik",
+        "startedInGrade": 6,
+        "isAvailable": true,
+        "isUnwanted": false,
+        "category": "Naturwissenschaften"
+      },
+      {
+        "id": 17,
+        "name": "Chemie",
+        "startedInGrade": 7,
+        "isAvailable": true,
+        "isUnwanted": false,
+        "category": "Naturwissenschaften"
+      },
+      {
+        "id": 18,
+        "name": "Evangelische Religion",
+        "startedInGrade": 5,
+        "isAvailable": true,
+        "isUnwanted": false,
+        "category": "Religion/Ethik"
+      },
+      {
+        "id": 19,
+        "name": "Katholische Religion",
+        "startedInGrade": 5,
+        "isAvailable": true,
+        "isUnwanted": false,
+        "category": "Religion/Ethik"
+      },
+      {
+        "id": 20,
+        "name": "Philosophie",
+        "startedInGrade": 11,
+        "isAvailable": true,
+        "isUnwanted": false,
+        "category": "Religion/Ethik"
+      },
+      {
+        "id": 21,
+        "name": "Sport",
+        "startedInGrade": 5,
+        "isAvailable": true,
+        "isUnwanted": false,
+        "category": "Sport"
+      }
+    ]
+  }

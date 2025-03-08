@@ -1,0 +1,26 @@
+// Custom styles to enhance Bootstrap
+.form-switch .form-check-input {
+    cursor: pointer;
+  }
+  
+  .table {
+    vertical-align: middle;
+  }
+  
+  .badge {
+    font-weight: 500;
+  }
+  
+  .card {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: none;
+  }
+  
+  .card-header {
+    font-weight: 500;
+  }
+  
+  // Hover effect for rows
+  tr:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
