@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { Schulfach, SchulfachCategory } from '../../models/schulfach.model';
+import { Schulfach } from '../../models/schulfach.model';
 import { SchulfachService } from '../../services/schulfach.service';
 
 @Component({
@@ -36,22 +36,22 @@ export class FaecherUebersichtComponent implements OnInit {
 
   applyFilters(): void {
     let result = [...this.faecher];
-    
+
     // Filter by category if selected
     if (this.selectedCategory) {
       result = result.filter(fach => fach.category === this.selectedCategory);
     }
-    
+
     // Filter by text if provided
     if (this.filterText) {
       const filterTextLower = this.filterText.toLowerCase();
-      result = result.filter(fach => 
+      result = result.filter(fach =>
         fach.name.toLowerCase().includes(filterTextLower)
       );
     }
-    
+
     this.filteredFaecher = result;
-    
+
     // Calculate counts
     this.availableFaecherCount = result.filter(f => f.isAvailable).length;
     this.unwantedFaecherCount = result.filter(f => f.isUnwanted).length;
@@ -68,14 +68,14 @@ export class FaecherUebersichtComponent implements OnInit {
   }
 
   toggleAvailability(fach: Schulfach): void {
-    const updatedFach = {...fach, isAvailable: !fach.isAvailable};
+    const updatedFach = { ...fach, isAvailable: !fach.isAvailable };
     this.schulfachService.updateFach(updatedFach);
     // Recalculate counts
     this.applyFilters();
   }
 
   toggleUnwanted(fach: Schulfach): void {
-    const updatedFach = {...fach, isUnwanted: !fach.isUnwanted};
+    const updatedFach = { ...fach, isUnwanted: !fach.isUnwanted };
     this.schulfachService.updateFach(updatedFach);
     // Recalculate counts
     this.applyFilters();
