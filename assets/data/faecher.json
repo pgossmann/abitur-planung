@@ -5,168 +5,220 @@
         "name": "Deutsch",
         "startedInGrade": 5,
         "isAvailable": true,
-        "isUnwanted": false,
-        "category": "Sprachen"
+        "isSelected": true,
+        "category": "Sprachen",
+        "hoursEF": 3,
+        "isMandatory": true
       },
       {
         "id": 2,
         "name": "Englisch",
         "startedInGrade": 5,
         "isAvailable": true,
-        "isUnwanted": false,
-        "category": "Sprachen"
+        "isSelected": true,
+        "category": "Sprachen",
+        "hoursEF": 3,
+        "isMandatory": false
       },
       {
         "id": 3,
         "name": "Französisch ab 7",
         "startedInGrade": 7,
         "isAvailable": true,
-        "isUnwanted": false,
-        "category": "Sprachen"
+        "isSelected": false,
+        "category": "Sprachen",
+        "hoursEF": 3,
+        "isMandatory": false
       },
       {
         "id": 4,
         "name": "Französisch ab 9",
         "startedInGrade": 9,
         "isAvailable": true,
-        "isUnwanted": false,
-        "category": "Sprachen"
+        "isSelected": false,
+        "category": "Sprachen",
+        "hoursEF": 3,
+        "isMandatory": false
       },
       {
         "id": 5,
         "name": "Spanisch ab 9",
         "startedInGrade": 9,
         "isAvailable": true,
-        "isUnwanted": false,
-        "category": "Sprachen"
+        "isSelected": false,
+        "category": "Sprachen",
+        "hoursEF": 3,
+        "isMandatory": false
       },
       {
         "id": 6,
         "name": "Spanisch ab 11",
         "startedInGrade": 11,
         "isAvailable": true,
-        "isUnwanted": false,
-        "category": "Sprachen"
+        "isSelected": false,
+        "category": "Sprachen",
+        "hoursEF": 4,
+        "isMandatory": false
       },
       {
         "id": 7,
         "name": "Latein",
         "startedInGrade": 5,
         "isAvailable": true,
-        "isUnwanted": false,
-        "category": "Sprachen"
+        "isSelected": false,
+        "category": "Sprachen",
+        "hoursEF": 3,
+        "isMandatory": false
       },
       {
         "id": 8,
         "name": "Kunst",
         "startedInGrade": 5,
         "isAvailable": true,
-        "isUnwanted": false,
-        "category": "Kunst/Musik"
+        "isSelected": false,
+        "category": "Kunst/Musik",
+        "hoursEF": 3,
+        "isMandatory": false
       },
       {
         "id": 9,
         "name": "Musik",
         "startedInGrade": 5,
         "isAvailable": true,
-        "isUnwanted": false,
-        "category": "Kunst/Musik"
+        "isSelected": false,
+        "category": "Kunst/Musik",
+        "hoursEF": 3,
+        "isMandatory": false
       },
       {
         "id": 10,
         "name": "Erdkunde",
         "startedInGrade": 5,
         "isAvailable": true,
-        "isUnwanted": false,
-        "category": "Gesellschaftswissenschaften"
+        "isSelected": false,
+        "category": "Gesellschaftswissenschaften",
+        "hoursEF": 3,
+        "isMandatory": false
       },
       {
         "id": 11,
         "name": "Sozialwissenschaften",
         "startedInGrade": 8,
         "isAvailable": true,
-        "isUnwanted": false,
-        "category": "Gesellschaftswissenschaften"
+        "isSelected": false,
+        "category": "Gesellschaftswissenschaften",
+        "hoursEF": 3,
+        "isMandatory": false
       },
       {
         "id": 12,
         "name": "Pädagogik",
         "startedInGrade": 11,
         "isAvailable": true,
-        "isUnwanted": false,
-        "category": "Gesellschaftswissenschaften"
+        "isSelected": false,
+        "category": "Gesellschaftswissenschaften",
+        "hoursEF": 3,
+        "isMandatory": false
       },
       {
         "id": 13,
         "name": "Geschichte",
         "startedInGrade": 6,
         "isAvailable": true,
-        "isUnwanted": false,
-        "category": "Gesellschaftswissenschaften"
+        "isSelected": false,
+        "category": "Gesellschaftswissenschaften",
+        "hoursEF": 3,
+        "isMandatory": false
       },
       {
         "id": 14,
         "name": "Mathematik",
         "startedInGrade": 5,
         "isAvailable": true,
-        "isUnwanted": false,
-        "category": "Mathematik"
+        "isSelected": true,
+        "category": "Mathematik",
+        "hoursEF": 3,
+        "isMandatory": true
       },
       {
         "id": 15,
         "name": "Biologie",
         "startedInGrade": 5,
         "isAvailable": true,
-        "isUnwanted": false,
-        "category": "Naturwissenschaften"
+        "isSelected": false,
+        "category": "Naturwissenschaften",
+        "hoursEF": 3,
+        "isMandatory": false
       },
       {
         "id": 16,
         "name": "Physik",
         "startedInGrade": 6,
         "isAvailable": true,
-        "isUnwanted": false,
-        "category": "Naturwissenschaften"
+        "isSelected": false,
+        "category": "Naturwissenschaften",
+        "hoursEF": 3,
+        "isMandatory": false
       },
       {
         "id": 17,
         "name": "Chemie",
         "startedInGrade": 7,
         "isAvailable": true,
-        "isUnwanted": false,
-        "category": "Naturwissenschaften"
+        "isSelected": false,
+        "category": "Naturwissenschaften",
+        "hoursEF": 3,
+        "isMandatory": false
       },
       {
         "id": 18,
         "name": "Evangelische Religion",
         "startedInGrade": 5,
         "isAvailable": true,
-        "isUnwanted": false,
-        "category": "Religion/Ethik"
+        "isSelected": false,
+        "category": "Religion/Ethik",
+        "hoursEF": 3,
+        "isMandatory": false
       },
       {
         "id": 19,
         "name": "Katholische Religion",
         "startedInGrade": 5,
         "isAvailable": true,
-        "isUnwanted": false,
-        "category": "Religion/Ethik"
+        "isSelected": false,
+        "category": "Religion/Ethik",
+        "hoursEF": 3,
+        "isMandatory": false
       },
       {
         "id": 20,
         "name": "Philosophie",
         "startedInGrade": 11,
         "isAvailable": true,
-        "isUnwanted": false,
-        "category": "Religion/Ethik"
+        "isSelected": false,
+        "category": "Religion/Ethik",
+        "hoursEF": 3,
+        "isMandatory": false
       },
       {
         "id": 21,
         "name": "Sport",
         "startedInGrade": 5,
         "isAvailable": true,
-        "isUnwanted": false,
-        "category": "Sport"
+        "isSelected": true,
+        "category": "Sport",
+        "hoursEF": 3,
+        "isMandatory": true
+      },
+      {
+        "id": 22,
+        "name": "Informatik",
+        "startedInGrade": 6,
+        "isAvailable": true,
+        "isSelected": false,
+        "category": "Naturwissenschaften",
+        "hoursEF": 3,
+        "isMandatory": false
       }
     ]
   }
