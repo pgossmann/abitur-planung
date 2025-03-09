@@ -1,0 +1,16 @@
+<div *ngIf="hasMessages()" 
+     [ngClass]="hasErrors() ? 'alert alert-warning' : 'alert alert-success'" 
+     role="alert" 
+     class="mt-3 mb-4">
+  <strong *ngIf="hasErrors()">Achtung!</strong>
+  <strong *ngIf="!hasErrors()">Glückwunsch!</strong>
+  
+  <ul *ngIf="hasErrors()">
+    <li *ngFor="let message of validationMessages">
+      {{ message.message }}
+    </li>
+  </ul>
+  
+  <p *ngIf="!hasErrors()">
+    {{ validationMessages[0].message }}
+  </p>

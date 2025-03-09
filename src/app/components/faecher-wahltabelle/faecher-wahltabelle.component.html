@@ -1,0 +1,89 @@
+<div class="table-responsive">
+    <table class="table" id="wahlTabelle">
+      <thead class="table-light">
+        <tr>
+          <th>Angebot am Schiller</th>
+          <th>Aufgabenfeld</th>
+          <th>Für EF</th>
+          <th>h/Wo</th>
+          <th>LK1</th>
+          <th>LK2</th>
+          <th>GK1</th>
+          <th>GK2 (mündlich)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Show all available subjects, but make unselected ones gray -->
+        <tr *ngFor="let fach of fachSelections" 
+            [ngClass]="getRowClass(fach)">
+          <td>{{ fach.fach.name }}</td>
+          <td [innerHTML]="getAufgabenfeldDisplay(fach)"></td>
+          <td class="text-center">
+            <div class="form-check form-check-inline justify-content-center">
+              <input type="checkbox" class="form-check-input" 
+                     [checked]="fach.fach.isSelected" 
+                     [disabled]="fach.fach.isMandatory"
+                     (change)="onToggleSelected(fach, $event)">
+            </div>
+          </td>
+          <td>
+            <input type="number" class="form-control form-control-sm stunden" 
+                   min="0" max="10" step="1"
+                   [value]="fach.hours" 
+                   (change)="onChangeHours(fach, $event)">
+          </td>
+          <td class="text-center">
+            <div class="form-check form-check-inline justify-content-center">
+                <input type="checkbox" class="form-check-input lk1-check" 
+                [checked]="fach.isLK1" 
+                [disabled]="!fach.fach.isSelected && !isMandatory(fach)"
+                (change)="onChangeLK1(fach, $event)">
+            </div>
+          </td>
+          <td class="text-center">
+            <div class="form-check form-check-inline justify-content-center">
+                <input type="checkbox" class="form-check-input lk2-check" 
+                [checked]="fach.isLK2" 
+                [disabled]="!fach.fach.isSelected && !isMandatory(fach)"
+                (change)="onChangeLK2(fach, $event)">
+            </div>
+          </td>
+          <td class="text-center">
+            <div class="form-check form-check-inline justify-content-center">
+                <input type="checkbox" class="form-check-input gk1-check" 
+                [checked]="fach.isGK1" 
+                [disabled]="!fach.fach.isSelected && !isMandatory(fach)"
+                (change)="onChangeGK1(fach, $event)">
+            </div>
+          </td>
+          <td class="text-center">
+            <div class="form-check form-check-inline justify-content-center">
+                <input type="checkbox" class="form-check-input gk2-check" 
+                [checked]="fach.isGK2" 
+                [disabled]="!fach.fach.isSelected && !isMandatory(fach)"
+                (change)="onChangeGK2(fach, $event)">
+                        </div>
+          </td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr class="table-secondary fw-bold">
+          <td colspan="2">Gesamtstunden</td>
+          <td>
+            <span id="gesamtStunden">{{ totalHours }}</span>
+            <span *ngIf="totalHours < 34" class="text-danger ms-2"> (Mindestens 34 Stunden erforderlich!)</span>
+          </td>
+          <td colspan="5"></td>
+        </tr>
+        <!-- Info row about selection -->
+        <tr>
+          <td colspan="8" class="small">
+            <div class="alert alert-info mb-0">
+              <i class="bi bi-info-circle me-2"></i>
+              Nur für die EF-Planung ausgewählte Fächer werden in der Gesamtstundenzahl berücksichtigt.
+            </div>
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>

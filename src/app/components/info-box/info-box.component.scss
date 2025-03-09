@@ -1,0 +1,28 @@
+.badge {
+    padding: 0.5rem 1rem;
+    font-weight: normal;
+    font-size: 0.9rem;
+    margin: 0.2rem;
+  }
+  
+  .field-1 {
+    background-color: #8B4513; // brown for sprachlich-literarisch-künstlerisch
+  }
+  
+  .field-2 {
+    background-color: #006400; // green for gesellschaftswissenschaftlich
+  }
+  
+  .field-3 {
+    background-color: #00008B; // blue for mathematisch-naturwissenschaftlich
+  }
+  
+  .field-none {
+    background-color: #8B0000; // red for ohne Aufgabenfeld
+  }
+  
+  @media print {
+    :host {
+      display: none;
+    }
+  }

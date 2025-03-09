@@ -3,8 +3,10 @@ export interface Schulfach {
     name: string;
     startedInGrade: number;
     isAvailable: boolean;
-    isUnwanted: boolean;
+    isSelected: boolean;
     category: string;
+    hoursEF: number;
+    isMandatory?: boolean;
   }
   
   export enum SchulfachCategory {

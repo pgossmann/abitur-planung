@@ -15,10 +15,11 @@ export class FaecherUebersichtComponent implements OnInit {
   faecher: Schulfach[] = [];
   filteredFaecher: Schulfach[] = [];
   availableFaecherCount = 0;
-  unwantedFaecherCount = 0;
+  selectedFaecherCount = 0;
   categories: string[] = [];
   selectedCategory: string = '';
   filterText: string = '';
+  saveMessage = '';
 
   constructor(private schulfachService: SchulfachService) { }
 
@@ -54,7 +55,7 @@ export class FaecherUebersichtComponent implements OnInit {
 
     // Calculate counts
     this.availableFaecherCount = result.filter(f => f.isAvailable).length;
-    this.unwantedFaecherCount = result.filter(f => f.isUnwanted).length;
+    this.selectedFaecherCount = result.filter(f => f.isSelected).length;
   }
 
   onCategoryChange(category: string): void {
@@ -74,16 +75,36 @@ export class FaecherUebersichtComponent implements OnInit {
     this.applyFilters();
   }
 
-  toggleUnwanted(fach: Schulfach): void {
-    const updatedFach = { ...fach, isUnwanted: !fach.isUnwanted };
-    this.schulfachService.updateFach(updatedFach);
+  toggleSelected(fach: Schulfach): void {
+    // Do not allow deselection of mandatory subjects
+    if (fach.isMandatory && fach.isSelected) {
+      return;
+    }
+    
+    fach.isSelected = !fach.isSelected;
+    this.schulfachService.updateFach(fach).subscribe();
+    // Save to localStorage immediately
+    this.saveToLocalStorage();
     // Recalculate counts
     this.applyFilters();
   }
 
+
   getRowClass(fach: Schulfach): string {
     if (!fach.isAvailable) return 'table-secondary';
-    if (fach.isUnwanted) return 'table-danger';
     return '';
   }
+  saveToLocalStorage(): void {
+    // Get all faecher and save them
+    this.schulfachService.getAllFaecher().subscribe(faecher => {
+      localStorage.setItem('schulfaecher', JSON.stringify(faecher));
+      this.saveMessage = 'Daten erfolgreich gespeichert!';
+
+      // Clear the message after 3 seconds
+      setTimeout(() => {
+        this.saveMessage = '';
+      }, 3000);
+    });
+  }
+  
 }

@@ -1,0 +1,15 @@
+<div class="card mt-4 bg-light border-success">
+    <div class="card-body">
+        <h5 class="card-title fw-bold">Jetzt schon bedenken für die Qualifikationsphase:</h5>
+        <ul class="mb-4">
+            <li *ngFor="let point of infoPoints">{{ point }}</li>
+        </ul>
+
+        <h5 class="card-title fw-bold">Aufgabenfelder:</h5>
+        <div class="d-flex flex-wrap gap-2">
+            <div *ngFor="let field of aufgabenfelder" [ngClass]="['badge', field.class]">
+                {{ field.name }}
+            </div>
+        </div>
+    </div>
+</div>

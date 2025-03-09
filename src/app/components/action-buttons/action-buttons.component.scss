@@ -1,0 +1,19 @@
+.fade-out {
+    animation: fadeOut 3s forwards;
+    animation-delay: 2s;
+  }
+  
+  @keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+  }
+  
+  .btn {
+    min-width: 120px;
+  }
+  
+  @media print {
+    :host {
+      display: none;
+    }
+  }

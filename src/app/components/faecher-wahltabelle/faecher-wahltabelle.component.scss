@@ -1,0 +1,102 @@
+// Styling for Aufgabenfeld indicators
+.aufgabenfeld {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 5px;
+    vertical-align: middle;
+  }
+  
+  .af1 {
+    background-color: #8B4513; // brown for sprachlich-literarisch-künstlerisch
+  }
+  
+  .af2 {
+    background-color: #006400; // green for gesellschaftswissenschaftlich
+  }
+  
+  .af3 {
+    background-color: #00008B; // blue for mathematisch-naturwissenschaftlich
+  }
+  
+  .af-none {
+    background-color: #8B0000; // red for ohne Aufgabenfeld
+  }
+  
+  // Input styling
+  input[type="text"],
+  input[type="number"] {
+    width: 100%;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+  }
+  
+  input[type="number"] {
+    width: 60px;
+  }
+  
+  .fixed-value {
+    font-weight: bold;
+    background-color: #f8f9fa;
+  }
+  
+  // Checkbox styling
+  .form-check-input {
+    transform: scale(1.2);
+    cursor: pointer;
+    
+    &:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+  }
+  
+  // Table styling
+  table {
+    th {
+      position: sticky;
+      top: 0;
+      background-color: #f8f9fa;
+      z-index: 10;
+    }
+  }
+  
+  // Subject category styling with subtle background colors
+  .subject-languages {
+    background-color: rgba(173, 216, 230, 0.2); // light blue
+  }
+  
+  .subject-math {
+    background-color: rgba(255, 255, 224, 0.2); // light yellow
+  }
+  
+  .subject-science {
+    background-color: rgba(144, 238, 144, 0.2); // light green
+  }
+  
+  .subject-social {
+    background-color: rgba(255, 222, 173, 0.2); // light orange
+  }
+  
+  .subject-religion {
+    background-color: rgba(230, 230, 250, 0.2); // lavender
+  }
+  
+  .subject-arts {
+    background-color: rgba(255, 182, 193, 0.2); // light pink
+  }
+  
+  .subject-sport {
+    background-color: rgba(220, 220, 220, 0.2); // light grey
+  }
+  
+  // Make unselected subjects clearly grayed out
+  .table-secondary {
+    background-color: #e2e3e5;
+    color: #555;
+    
+    input:not([type="checkbox"]) {
+      background-color: #eaebec;
+    }
+  }
