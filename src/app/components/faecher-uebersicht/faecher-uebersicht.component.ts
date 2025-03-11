@@ -82,9 +82,8 @@ export class FaecherUebersichtComponent implements OnInit {
     }
     
     fach.isSelected = !fach.isSelected;
-    this.schulfachService.updateFach(fach).subscribe();
     // Save to localStorage immediately
-    this.saveToLocalStorage();
+    this.schulfachService.updateFach(fach);
     // Recalculate counts
     this.applyFilters();
   }
@@ -93,18 +92,6 @@ export class FaecherUebersichtComponent implements OnInit {
   getRowClass(fach: Schulfach): string {
     if (!fach.isAvailable) return 'table-secondary';
     return '';
-  }
-  saveToLocalStorage(): void {
-    // Get all faecher and save them
-    this.schulfachService.getAllFaecher().subscribe(faecher => {
-      localStorage.setItem('schulfaecher', JSON.stringify(faecher));
-      this.saveMessage = 'Daten erfolgreich gespeichert!';
-
-      // Clear the message after 3 seconds
-      setTimeout(() => {
-        this.saveMessage = '';
-      }, 3000);
-    });
   }
   
 }

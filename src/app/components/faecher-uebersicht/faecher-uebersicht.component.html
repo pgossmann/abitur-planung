@@ -56,11 +56,4 @@
     <h3>Zusammenfassung</h3>
     <p>Verfügbare Fächer: <span class="badge bg-primary">{{ availableFaecherCount }}</span></p>
     <p>Für EF Planung ausgewählt: <span class="badge bg-success">{{ selectedFaecherCount }}</span></p>
-    
-    <div class="mt-3">
-        <button class="btn btn-primary" (click)="saveToLocalStorage()">
-            <i class="bi bi-save me-2"></i>Speichern
-        </button>
-        <span *ngIf="saveMessage" class="text-success ms-3">{{ saveMessage }}</span>
-    </div>
 </div>

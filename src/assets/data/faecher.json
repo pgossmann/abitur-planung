@@ -219,6 +219,36 @@
         "category": "Naturwissenschaften",
         "hoursEF": 3,
         "isMandatory": false
+      },
+      {
+        "id": 23,
+        "name": "VTF Mathematik",
+        "startedInGrade": 6,
+        "isAvailable": true,
+        "isSelected": false,
+        "category": "Naturwissenschaften",
+        "hoursEF": 2,
+        "isMandatory": false
+      },
+      {
+        "id": 24,
+        "name": "VTF Deutsch",
+        "startedInGrade": 6,
+        "isAvailable": true,
+        "isSelected": false,
+        "category": "Sprachen",
+        "hoursEF": 2,
+        "isMandatory": false
+      },
+      {
+        "id": 25,
+        "name": "VTF Englisch",
+        "startedInGrade": 6,
+        "isAvailable": true,
+        "isSelected": false,
+        "category": "Sprachen",
+        "hoursEF": 2,
+        "isMandatory": false
       }
     ]
   }

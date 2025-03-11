@@ -34,7 +34,8 @@ export class SchulfachService {
                             if (savedFach) {
                                 return {
                                     ...jsonFach,
-                                    isSelected: savedFach.isSelected
+                                    isSelected: savedFach.isSelected,
+                                    isAvailable: savedFach.isAvailable
                                 };
                             }
                             return jsonFach;
@@ -62,9 +63,9 @@ export class SchulfachService {
         );
     }
 
-    updateFach(updatedFach: Schulfach): Observable<Schulfach[]> {
-        // Update the fach in our subject
-        return this.getAllFaecher().pipe(
+    updateFach(updatedFach: Schulfach): void {
+        this.getAllFaecher().pipe(
+            take(1), // Nimmt nur den ersten Wert und beendet das Observable automatisch
             map(faecher => {
                 const index = faecher.findIndex(fach => fach.id === updatedFach.id);
                 if (index !== -1) {
@@ -76,10 +77,21 @@ export class SchulfachService {
                 }
                 return faecher;
             })
-        );
+        ).subscribe();
     }
 
     getCategories(): string[] {
         return Object.values(SchulfachCategory);
+    }
+
+    reset() {
+        return this.http.get<{ schulfaecher: Schulfach[] }>('assets/data/faecher.json')
+            .pipe(
+                map(response => response.schulfaecher),
+                tap(faecher => {
+                    localStorage.setItem('schulfaecher', JSON.stringify(faecher));
+                    this.faecherSubject.next([...faecher]);
+                })
+            );
     }
 }

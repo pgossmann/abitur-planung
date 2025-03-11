@@ -25,14 +25,6 @@ export class ActionButtonsComponent implements OnInit {
     });
   }
 
-  onSave(): void {
-    this.abiturPlanungService.saveData();
-  }
-
-  onLoad(): void {
-    this.abiturPlanungService.loadSavedData();
-  }
-
   onReset(): void {
     if (confirm('Möchten Sie wirklich alle Einträge zurücksetzen?')) {
       this.abiturPlanungService.resetForm();

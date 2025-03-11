@@ -22,10 +22,8 @@ import { AbiturPlanungService } from '../../services/abitur-planung.service';
 export class AbiturEfPlanungComponent implements OnInit {
   title = 'Abitur - Planung 11. Klasse (EF)';
 
-  constructor(private abiturPlanungService: AbiturPlanungService) { }
+  constructor() { }
 
   ngOnInit(): void {
-    // Load saved data if available
-    this.abiturPlanungService.loadSavedData();
   }
 }

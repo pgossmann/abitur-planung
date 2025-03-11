@@ -44,7 +44,7 @@ export class AbiturPlanungService {
     this.schulfachService.getAllFaecher().subscribe(faecher => {
       // Filter to include only available subjects
       const availableFaecher = faecher.filter(fach => fach.isAvailable);
-      
+
       const selections: FachSelection[] = availableFaecher.map(fach => {
         // Use hoursEF as the default hours
         let defaultHours = fach.hoursEF || 3;
@@ -228,33 +228,12 @@ export class AbiturPlanungService {
     return warnings;
   }
 
-  saveData(): void {
-    try {
-      localStorage.setItem('abiturPlanungData', JSON.stringify(this.fachSelectionsSubject.value));
-      this.showStatus('Daten wurden erfolgreich gespeichert!', true);
-    } catch (e) {
-      this.showStatus('Fehler beim Speichern der Daten: ' + e, false);
-    }
-  }
-
-  loadSavedData(): void {
-    try {
-      const saved = localStorage.getItem('abiturPlanungData');
-      if (saved) {
-        const data = JSON.parse(saved) as FachSelection[];
-        this.fachSelectionsSubject.next(data);
-        this.showStatus('Daten wurden erfolgreich geladen!', true);
-      }
-    } catch (e) {
-      console.error('Error loading data:', e);
-      this.showStatus('Fehler beim Laden der Daten', false);
-    }
-  }
-
   resetForm(): void {
-    this.initializeFachSelections();
-    this.validationMessagesSubject.next([]);
-    this.showStatus('Alle Einträge wurden zurückgesetzt.', true);
+    this.schulfachService.reset().subscribe(faecher => {
+      this.initializeFachSelections();
+      this.validationMessagesSubject.next([]);
+      this.showStatus('Alle Einträge wurden zurückgesetzt.', true);
+    });
   }
 
   printForm(): void {

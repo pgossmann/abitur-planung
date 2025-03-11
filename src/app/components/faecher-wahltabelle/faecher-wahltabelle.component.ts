@@ -159,14 +159,10 @@ export class FaecherWahltabelleComponent implements OnInit {
     
     // Update the Schulfach object's isSelected property
     const updatedFach = {...fach.fach, isSelected};
-    
+    fach.fach.isSelected = isSelected;
+    this.calculateTotal();
     // Call the service to update the Schulfach
-    this.abiturPlanungService.schulfachService.updateFach(updatedFach).subscribe(() => {
-      // Update our local FachSelection reference
-      fach.fach.isSelected = isSelected;
-      // Recalculate total hours
-      this.calculateTotal();
-    });
+    this.abiturPlanungService.schulfachService.updateFach(updatedFach);
   }
   
   isMandatory(fach: FachSelection): boolean {
